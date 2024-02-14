@@ -1,0 +1,21 @@
+cabal-version: 3.8
+name: coq-of-hs
+version: 1.0.0.0
+
+library
+  build-depends:
+    base >= 4.14,
+    directory,
+    filepath,
+    ghc >= 8.10.7,
+    prettyprinter
+  hs-source-dirs: src
+  exposed-modules: CoqOfHs
+
+test-suite test-plugin
+  build-depends:
+    base,
+    coq-of-hs
+  hs-source-dirs: test
+  ghc-options: -fplugin=CoqOfHs
+  main-is: Main.hs
