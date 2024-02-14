@@ -1,6 +1,6 @@
 # coq-of-hs-experiment
 
-Experiment on translation of Haskell Core to Coq
+Experiment on translation of Haskell code to Coq&nbsp;🐓
 
 > This project is experimental. We put it there as it might be of interest for others.
 
@@ -65,3 +65,14 @@ These constructors correspond to the ones that are in the Haskell Core language.
 We disable the positivity checks `#[bypass_check(positivity)]` for the `Lam` constructor, because it takes a function with a parameter of type `t`. This is forbidden in Coq as it can lead to non-termination, but we still disable it here for convenience. We do not know if this is an issue in our case, as the programs that we consider are well-typed according to the type-checker of Haskell.
 
 We have not yet defined a semantics for these terms. It should be interesting to see how to reason about these potentially non-terminating terms.
+
+## 🎁 Contribute
+
+You can open a pull request or create an issue. The code is under AGPL license.
+
+## 🌍 Related
+
+This project is only an experiment. There are more complete projects:
+
+- [🐓 hs-to-coq](https://github.com/plclub/hs-to-coq) another project to translate Haskell code to Coq. This translation is more hight-level: for example it keeps the types.
+- [💧 Liquid Haskell](https://en.wikipedia.org/wiki/Liquid_Haskell) using [SMT solvers](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) to verify Haskell programs.
