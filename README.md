@@ -1,6 +1,6 @@
 # coq-of-hs-experiment
 
-Experiment on translation of Haskell code to Coq&nbsp;🐓
+Experiment on the translation of Haskell code to Coq&nbsp;🐓
 
 > This project is experimental. We put it there as it might be of interest for others.
 
@@ -33,7 +33,7 @@ The goal of this project is to formally verify Haskell programs.
 Formal verification is using mathematical reasoning over a program to show that it is correct for all possible inputs. This contrasts with:
 
 - Testing, which only shows that a program is correct for a limited set of inputs.
-- Typing, which only verify a limited set of properties. For example, Haskell's type system cannot verify that the total amount of money stays constant for internal transactions, if one implements a bank system.
+- Typing, which only verifies a limited set of properties. For example, Haskell's type system cannot verify that the total amount of money stays constant for internal transactions, if one implements a bank system.
 
 ## ❓ What
 
@@ -41,7 +41,7 @@ The tool `coq-of-hs` translates Haskell code to [Coq](https://coq.inria.fr/), a 
 
 ## 🔍 How
 
-We translate Haskell code by reading the intermediate language Haskell Core of the [GHC](https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler) compiler. This intermediate language is a small and simple, so we hope this is an ideal target to translate Haskell code to Coq. The blog post [Haskell to Core: Understanding Haskell Features Through Their Desugaring](https://serokell.io/blog/haskell-to-core) gives a nice introduction to Haskell Core.
+We translate Haskell code by reading the intermediate language Haskell Core of the [GHC](https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler) compiler. This intermediate language is small and simple, so we hope this is an ideal target to translate Haskell code to Coq. The blog post [Haskell to Core: Understanding Haskell Features Through Their Desugaring](https://serokell.io/blog/haskell-to-core) gives a nice introduction to Haskell Core.
 
 To read Haskell Core representation, we use the plugin system of GHC. This allows us to see the code how GHC sees it, with all the compilation options that a user may have activated for a project. See this Stack Overflow's question [How to test GHC plugins?](https://stackoverflow.com/questions/55878912/how-to-test-ghc-plugins) for a nice introduction to GHC plugins.
 
@@ -68,11 +68,11 @@ We have not yet defined a semantics for these terms. It should be interesting to
 
 ## 🎁 Contribute
 
-You can open a pull request or create an issue. The code is under AGPL license.
+You can contribute by opening a pull request or creating an issue. The code is under the AGPL license.
 
 ## 🌍 Related
 
 This project is only an experiment. There are more complete projects:
 
-- [🐓 hs-to-coq](https://github.com/plclub/hs-to-coq) another project to translate Haskell code to Coq. This translation is more hight-level: for example it keeps the types.
+- [🐓 hs-to-coq](https://github.com/plclub/hs-to-coq) another project to translate Haskell code to Coq. This translation is more high-level: for example it keeps the types.
 - [💧 Liquid Haskell](https://en.wikipedia.org/wiki/Liquid_Haskell) using [SMT solvers](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) to verify Haskell programs.
